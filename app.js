@@ -5,7 +5,7 @@ const msg=document.getElementById('errorMsg')
 button.addEventListener ('click', () => {
   if (input.value) {
     const cityName = input.value.toLowerCase ();
-    url ='https://api.openweathermap.org/data/2.5/weather?q=' + cityName +'&appid=466d6f0408c2efb79f1b29ae4e788b81';
+    url ='https://api.openweathermap.org/data/2.5/weather?q=' + cityName +'&appid=19a22c19916855a97938c4084c52be58';
     fetch (url)
       .then (response => response.json ())
       //.then(data=>console.log(data))
@@ -88,13 +88,13 @@ function myPosition (position) {
 }
 
 function getWeather (lat, long) {
-  const api = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=466d6f0408c2efb79f1b29ae4e788b81';
+  const api = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=19a22c19916855a97938c4084c52be58';
   //console.log (api);
   fetch (api).then (response => response.json ())
   .then (data => {
            data.name;//output's only  current position location name
     //Rendering current position weather
-    url ='https://api.openweathermap.org/data/2.5/weather?q=' +data.name +'&appid=466d6f0408c2efb79f1b29ae4e788b81';
+    url ='https://api.openweathermap.org/data/2.5/weather?q=' +data.name +'&appid=19a22c19916855a97938c4084c52be58';
     fetch (url)
       .then (response => response.json ())
       //.then(data=>console.log(data))
@@ -102,4 +102,4 @@ function getWeather (lat, long) {
   });
 }
 
-// api="466d6f0408c2efb79f1b29ae4e788b81"
+// api="19a22c19916855a97938c4084c52be58"
